@@ -1,0 +1,91 @@
+﻿<Window x:Class="RestaurantApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantApp"  
+        xmlns:views="clr-namespace:RestaurantApp.Views" 
+        xmlns:viewmodels="clr-namespace:RestaurantApp.ViewModels" 
+        xmlns:converters="clr-namespace:RestaurantApp.Converters"
+        mc:Ignorable="d"
+        Title="Restaurant Application" Height="700" Width="1000">
+
+    <Window.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter"/>
+        
+        <!--<DataTemplate DataType="{x:Type viewmodels:MenuViewModel}">
+            <views:MenuView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:SearchViewModel}">
+            <views:SearchView />
+        </DataTemplate>-->
+        <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+            <views:LoginView />
+        </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
+            <views:RegisterView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:OrderViewModel}">
+            <views:OrderView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:OrderHistoryViewModel}">
+            <views:OrderHistoryView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:AdminViewModel}">
+            <views:AdminView />
+        </DataTemplate>-->
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Navigation Bar -->
+        <Grid Grid.Row="0" Background="#FF2C3E50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+
+            
+            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Menu" Command="{Binding NavigateCommand}" CommandParameter="Menu" 
+                        Style="{StaticResource NavButtonStyle}"/>
+                <Button Content="Search" Command="{Binding NavigateCommand}" CommandParameter="Search"
+                        Style="{StaticResource NavButtonStyle}"/>
+                <Button Content="Place Order" Command="{Binding NavigateCommand}" CommandParameter="Order"
+                        Style="{StaticResource NavButtonStyle}"
+                        Visibility="{Binding IsClientLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <Button Content="Order History" Command="{Binding NavigateCommand}" CommandParameter="OrderHistory"
+                        Style="{StaticResource NavButtonStyle}"
+                        Visibility="{Binding IsClientLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <Button Content="Admin Panel" Command="{Binding NavigateCommand}" CommandParameter="Admin"
+                        Style="{StaticResource NavButtonStyle}"
+                        Visibility="{Binding IsEmployeeLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Login" Command="{Binding NavigateCommand}" CommandParameter="Login"
+                        Style="{StaticResource NavButtonStyle}"
+                        Visibility="{Binding IsLoggedIn, Converter={StaticResource InverseBooleanToVisibilityConverter}}"/>
+                <Button Content="Register" Command="{Binding NavigateCommand}" CommandParameter="Register"
+                        Style="{StaticResource NavButtonStyle}"
+                        Visibility="{Binding IsLoggedIn, Converter={StaticResource InverseBooleanToVisibilityConverter}}"/>
+                <TextBlock Text="{Binding CurrentUserName}" VerticalAlignment="Center" Margin="10,0"
+                           Foreground="White" FontWeight="Bold"
+                           Visibility="{Binding IsLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <Button Content="Logout" Command="{Binding LogoutCommand}"
+                        Style="{StaticResource NavButtonStyle}"
+                        Visibility="{Binding IsLoggedIn, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Content Area -->
+        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
+    </Grid>
+</Window>

@@ -1,0 +1,139 @@
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\App.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp_MarkupCompile.cache
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp_MarkupCompile.lref
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.exe
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.deps.json
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.runtimeconfig.json
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.dll
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.pdb
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\MenuView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\MenuView.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.g.resources
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.AssemblyInfoInputs.cache
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.AssemblyInfo.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.csproj.CoreCompileInputs.cache
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.dll
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\refint\RestaurantApp.dll
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.pdb
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.genruntimeconfig.cache
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\ref\RestaurantApp.dll
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\LoginView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\LoginView.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderHistoryView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderHistoryView.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrdersListView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrdersListView.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderView.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\RegisterView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\RegisterView.baml
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\SearchView.g.cs
+D:\Facultate\Anul II\Semestrul II\MAP\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\SearchView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.exe
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.deps.json
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.runtimeconfig.json
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\RestaurantApp.pdb
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\LoginView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\MenuView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderHistoryView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrdersListView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\RegisterView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\SearchView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp_MarkupCompile.cache
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp_MarkupCompile.lref
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\LoginView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\MenuView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderHistoryView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrdersListView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\OrderView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\RegisterView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\SearchView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.g.resources
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.AssemblyInfoInputs.cache
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.AssemblyInfo.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.csproj.CoreCompileInputs.cache
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.sourcelink.json
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\refint\RestaurantApp.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.pdb
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.genruntimeconfig.cache
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\ref\RestaurantApp.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\AdminPanel.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\AdminPanel.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\LowStockItems.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\LowStockItems.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\App.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\CustomerDashboardView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\EmployeeDashboardView.g.cs
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\CustomerDashboardView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Views\EmployeeDashboardView.baml
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\RestaurantApp.csproj.AssemblyReference.cache
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Sebi\Desktop\RestaurantApp\RestaurantApp\obj\Debug\net8.0-windows\Restaura.085412B4.Up2Date

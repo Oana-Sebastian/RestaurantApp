@@ -1,0 +1,186 @@
+﻿<UserControl x:Class="RestaurantApp.Views.OrdersListView"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:RestaurantApp.Views"
+            xmlns:converters="clr-namespace:RestaurantApp.Converters"
+            mc:Ignorable="d" 
+            d:DesignHeight="600" d:DesignWidth="1000" >
+
+    <UserControl.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:OrderStatusToBrushConverter x:Key="OrderStatusToBrushConverter"/>
+        <converters:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <!-- Empty Message -->
+        <TextBlock Text="No orders found." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Opacity="0.7"
+                  Visibility="{Binding HasOrders, Converter={StaticResource InverseBooleanToVisibilityConverter}}"/>
+
+        <!-- Orders List -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                     Visibility="{Binding HasOrders, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <ItemsControl ItemsSource="{Binding Orders}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Expander Header="{Binding OrderSummary}" Margin="0,0,0,10" IsExpanded="False">
+                            <Border BorderBrush="#FFE0E0E0" BorderThickness="1" CornerRadius="5" Padding="15" Margin="0,5,0,0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Order Header -->
+                                    <Grid Grid.Row="0" Margin="0,0,0,10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Order ID and Date -->
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock>
+                                               <Run Text="Order ID: " FontWeight="SemiBold"/>
+                                               <Run Text="{Binding OrderCode}"/>
+                                            </TextBlock>
+                                            <TextBlock>
+                                               <Run Text="Date: " FontWeight="SemiBold"/>
+                                               <Run Text="{Binding OrderDate, StringFormat='{}{0:dd MMM yyyy, HH:mm}'}"/>
+                                            </TextBlock>
+                                        </StackPanel>
+
+                                        <!-- Order Status -->
+                                        <Border Grid.Column="1" Background="{Binding Status, Converter={StaticResource OrderStatusToBrushConverter}}" 
+                                               CornerRadius="3" Padding="8,3">
+                                            <TextBlock Text="{Binding Status}" Foreground="White" FontWeight="SemiBold"/>
+                                        </Border>
+                                    </Grid>
+
+                                    <!-- Order Items -->
+                                    <StackPanel Grid.Row="1" Margin="0,0,0,10">
+                                        <TextBlock Text="Items:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                                        <ItemsControl ItemsSource="{Binding OrderItems}" Margin="10,0,0,0">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Margin="0,0,0,3">
+                                                       <Run Text="{Binding Quantity}"/>
+                                                       <Run Text="x"/>
+                                                       <Run Text="{Binding Name}"/>
+                                                       <Run Text=" - "/>
+                                                       <Run Text="{Binding TotalPrice, StringFormat={}{0:C}}"/>
+                                                    </TextBlock>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </StackPanel>
+
+                                    <!-- Order Summary -->
+                                    <StackPanel Grid.Row="2" Margin="0,0,0,10">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Subtotal:" FontWeight="SemiBold"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Subtotal, StringFormat={}{0:C}}"/>
+                                        </Grid>
+
+                                        <Grid Visibility="{Binding HasDiscount, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Discount:" Foreground="#FF4CAF50"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding DiscountAmount, StringFormat={}-{0:C}}" Foreground="#FF4CAF50"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Shipping:"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding ShippingCost, StringFormat={}{0:C}}"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,5,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Total:" FontWeight="Bold"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Total, StringFormat={}{0:C}}" FontWeight="Bold"/>
+                                        </Grid>
+
+                                        <Grid Margin="0,5,0,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Estimated Delivery:" FontWeight="SemiBold"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding EstimatedDeliveryTime, StringFormat='{}{0:HH:mm}'}"/>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <!-- Action Buttons -->
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <!-- Customer Information Section (Only visible for employees) -->
+                                        <Expander Header="Customer Details" 
+                                                 Visibility="{Binding DataContext.IsEmployee, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                                 Margin="0,0,10,0">
+                                            <Border BorderBrush="#FFE0E0E0" BorderThickness="1" CornerRadius="3" Padding="8" Margin="0,5,0,0">
+                                                <StackPanel>
+                                                    <TextBlock>
+                                                       <Run Text="Name: " FontWeight="SemiBold"/>
+                                                       <Run Text="{Binding CustomerFullName}"/>
+                                                    </TextBlock>
+                                                    <TextBlock>
+                                                       <Run Text="Phone: " FontWeight="SemiBold"/>
+                                                       <Run Text="{Binding CustomerPhone}"/>
+                                                    </TextBlock>
+                                                    <TextBlock TextWrapping="Wrap">
+                                                       <Run Text="Address: " FontWeight="SemiBold"/>
+                                                       <Run Text="{Binding DeliveryAddress}"/>
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </Expander>
+
+                                        <!-- Cancel Order Button (Only for active orders and for customers) -->
+                                        <Button Content="Cancel Order" 
+                                               Command="{Binding DataContext.CancelOrderCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                               CommandParameter="{Binding}"
+                                               Visibility="{Binding CanCancel, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                               Style="{StaticResource DangerButton}"
+                                               Margin="0,0,10,0"/>
+
+                                        <!-- Change Status Button (Only for employees) -->
+                                        <Button Content="Change Status" 
+                                               Command="{Binding DataContext.ChangeOrderStatusCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                               CommandParameter="{Binding}"
+                                               Visibility="{Binding DataContext.IsEmployee, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                               Style="{StaticResource PrimaryButton}"
+                                               Margin="0,0,10,0"
+                                               IsEnabled="{Binding IsActive}"/>
+
+                                        <!-- Track Order Button (Only for active orders) -->
+                                        <Button Content="Track Order" 
+                                               Command="{Binding DataContext.TrackOrderCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                               CommandParameter="{Binding}"
+                                               Visibility="{Binding IsActive, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                               Style="{StaticResource SecondaryButton}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Expander>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

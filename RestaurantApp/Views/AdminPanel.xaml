@@ -1,0 +1,322 @@
+﻿<UserControl x:Class="RestaurantApp.Views.AdminPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+             <!--xmlns:vm="clr-namespace:RestaurantApp.ViewModels"-->
+
+    <!--<UserControl.DataContext>
+        <vm:AdminPanelViewModel/>
+    </UserControl.DataContext>-->
+
+    <Grid>
+        <TabControl Margin="10">
+            <!-- Categories Management Tab -->
+            <TabItem Header="Categories">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Categories DataGrid -->
+                    <DataGrid Grid.Row="1" Margin="0,10,0,10" 
+                              ItemsSource="{Binding Categories}"
+                              SelectedItem="{Binding SelectedCategory}"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Category Edit Form -->
+                    <GroupBox Grid.Row="2" Header="Edit Category">
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CategoryName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Description:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CategoryDescription, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                <Button Content="New" Command="{Binding NewCategoryCommand}" Width="80" Margin="0,0,5,0"/>
+                                <Button Content="Save" Command="{Binding SaveCategoryCommand}" Width="80" Margin="0,0,5,0"/>
+                                <Button Content="Delete" Command="{Binding DeleteCategoryCommand}" Width="80"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+
+            <!-- Products Management Tab -->
+            <TabItem Header="Products">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Products Filter -->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Text="Category Filter:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <ComboBox Width="200" 
+                                  ItemsSource="{Binding Categories}"
+                                  DisplayMemberPath="Name"
+                                  SelectedItem="{Binding SelectedCategoryFilter}"/>
+                        <Button Content="Clear Filter" Command="{Binding ClearProductFilterCommand}" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <!-- Products DataGrid -->
+                    <DataGrid Grid.Row="1" Margin="0,10,0,10" 
+                              ItemsSource="{Binding Products}"
+                              SelectedItem="{Binding SelectedProduct}"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat=C}" Width="Auto"/>
+                            <DataGridTextColumn Header="Portion Size" Binding="{Binding PortionSize}" Width="Auto"/>
+                            <DataGridTextColumn Header="Total Quantity" Binding="{Binding TotalQuantity}" Width="Auto"/>
+                            <DataGridTextColumn Header="Category" Binding="{Binding Category.Name}" Width="Auto"/>
+                            <DataGridTextColumn Header="Allergens" Binding="{Binding AllergensDisplay}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Product Edit Form -->
+                    <GroupBox Grid.Row="2" Header="Edit Product">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProductName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Price:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ProductPrice, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Portion Size:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ProductPortionSize, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Total Quantity:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ProductTotalQuantity, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="4" Grid.Column="0" Text="Category:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <ComboBox Grid.Row="4" Grid.Column="1" 
+                                          ItemsSource="{Binding Categories}"
+                                          DisplayMemberPath="Name"
+                                          SelectedItem="{Binding SelectedProductCategory}"
+                                          Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="5" Grid.Column="0" Text="Allergens:" Margin="0,0,10,5" VerticalAlignment="Top"/>
+                                <ListBox Grid.Row="5" Grid.Column="1" 
+                                         ItemsSource="{Binding Allergens}"
+                                         SelectionMode="Multiple"
+                                         MaxHeight="100"
+                                         Margin="0,0,0,5">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <CheckBox Content="{Binding Name}" 
+                                                      IsChecked="{Binding IsSelected}"/>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+
+                                <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                    <Button Content="New" Command="{Binding NewProductCommand}" Width="80" Margin="0,0,5,0"/>
+                                    <Button Content="Save" Command="{Binding SaveProductCommand}" Width="80" Margin="0,0,5,0"/>
+                                    <Button Content="Delete" Command="{Binding DeleteProductCommand}" Width="80"/>
+                                </StackPanel>
+                            </Grid>
+                        </ScrollViewer>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+
+            <!-- Menus Management Tab -->
+            <TabItem Header="Menus">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Menus Filter -->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Text="Category Filter:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <ComboBox Width="200" 
+                                  ItemsSource="{Binding Categories}"
+                                  DisplayMemberPath="Name"
+                                  SelectedItem="{Binding SelectedMenuCategoryFilter}"/>
+                        <Button Content="Clear Filter" Command="{Binding ClearMenuFilterCommand}" Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <!-- Menus DataGrid -->
+                    <DataGrid Grid.Row="1" Margin="0,10,0,10" 
+                              ItemsSource="{Binding Menus}"
+                              SelectedItem="{Binding SelectedMenu}"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat=C}" Width="Auto"/>
+                            <DataGridTextColumn Header="Category" Binding="{Binding Category.Name}" Width="Auto"/>
+                            <DataGridTextColumn Header="Number of Products" Binding="{Binding MenuProducts.Count}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Menu Edit Form -->
+                    <GroupBox Grid.Row="2" Header="Edit Menu">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="300">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding MenuName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="Category:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                                <ComboBox Grid.Row="1" Grid.Column="1" 
+                                          ItemsSource="{Binding Categories}"
+                                          DisplayMemberPath="Name"
+                                          SelectedItem="{Binding SelectedMenuCategory}"
+                                          Margin="0,0,0,5"/>
+
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Products:" Margin="0,0,10,5" VerticalAlignment="Top"/>
+                                <Grid Grid.Row="2" Grid.Column="1" Margin="0,0,0,5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,5">
+                                        <ComboBox Width="200" 
+                                                  ItemsSource="{Binding AvailableProducts}"
+                                                  DisplayMemberPath="Name"
+                                                  SelectedItem="{Binding SelectedProductToAdd}"/>
+                                        <TextBox Width="80" Text="{Binding ProductQuantity}" Margin="5,0" ToolTip="Quantity"/>
+                                        <Button Content="Add Product" Command="{Binding AddProductToMenuCommand}"/>
+                                    </StackPanel>
+
+                                    <DataGrid Grid.Row="1" 
+                                              ItemsSource="{Binding MenuProducts}"
+                                              AutoGenerateColumns="False"
+                                              Height="150">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Product Name" Binding="{Binding Product.Name}" Width="*"/>
+                                            <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="Auto"/>
+                                            <DataGridTemplateColumn Width="Auto">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Content="Remove" 
+                                                                Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, 
+                                                                         Path=DataContext.RemoveProductFromMenuCommand}"
+                                                                CommandParameter="{Binding}"/>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+
+                                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                    <Button Content="New" Command="{Binding NewMenuCommand}" Width="80" Margin="0,0,5,0"/>
+                                    <Button Content="Save" Command="{Binding SaveMenuCommand}" Width="80" Margin="0,0,5,0"/>
+                                    <Button Content="Delete" Command="{Binding DeleteMenuCommand}" Width="80"/>
+                                </StackPanel>
+                            </Grid>
+                        </ScrollViewer>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+
+            <!-- Allergens Management Tab -->
+            <TabItem Header="Allergens">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Allergens DataGrid -->
+                    <DataGrid Grid.Row="0" Margin="0,10,0,10" 
+                              ItemsSource="{Binding Allergens}"
+                              SelectedItem="{Binding SelectedAllergen}"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Allergen Edit Form -->
+                    <GroupBox Grid.Row="1" Header="Edit Allergen">
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding AllergenName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="Description:" Margin="0,0,10,5" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding AllergenDescription, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,5"/>
+
+                            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                                <Button Content="New" Command="{Binding NewAllergenCommand}" Width="80" Margin="0,0,5,0"/>
+                                <Button Content="Save" Command="{Binding SaveAllergenCommand}" Width="80" Margin="0,0,5,0"/>
+                                <Button Content="Delete" Command="{Binding DeleteAllergenCommand}" Width="80"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

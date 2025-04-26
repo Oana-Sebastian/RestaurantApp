@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="RestaurantApp.Views.OrderHistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantApp.Views"
+             xmlns:converters="clr-namespace:RestaurantApp.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:OrderStatusToBrushConverter x:Key="OrderStatusToBrushConverter"/>
+    </UserControl.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Text="Order History" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <!-- Tabs -->
+        <TabControl Grid.Row="1" Grid.RowSpan="2">
+            <TabItem Header="All Orders">
+                <ContentControl Content="{Binding AllOrdersViewModel}"/>
+            </TabItem>
+            <TabItem Header="Active Orders">
+                <ContentControl Content="{Binding ActiveOrdersViewModel}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>
